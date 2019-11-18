@@ -11,7 +11,7 @@ namespace MultiThreadingWinFormsAppAsAGroupProject
         }
         public override void RunThread() {
             msg = "Hello from AdorableAnt.RunThread()";
-            Thread.Sleep(10000);
+            Thread.Sleep(2000);
         }
     }
 }

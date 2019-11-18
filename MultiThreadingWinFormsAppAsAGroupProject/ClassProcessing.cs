@@ -38,7 +38,7 @@ namespace MultiThreadingWinFormsAppAsAGroupProject
                 if (fb.IsAlive) {
                     Boolean joinStatus;
                     Console.WriteLine("Waiting for thread to complete");
-                    joinStatus = fb.Join(500);
+                    joinStatus = fb.Join(5000);
                     if (joinStatus == false) {
                         txtMessages.AppendText(Environment.NewLine + fb.GetType() + " thread timed out.");
                     } else {
@@ -48,6 +48,7 @@ namespace MultiThreadingWinFormsAppAsAGroupProject
                     GetMsg(fb, txtMessages);
                 }
             }
+            txtMessages.AppendText(Environment.NewLine + "****Done.****");
         }
         private static void GetMsg(FantasticBeast fb, TextBox txtMessages) {
             // The thread should have written a message so we can retrieve it.

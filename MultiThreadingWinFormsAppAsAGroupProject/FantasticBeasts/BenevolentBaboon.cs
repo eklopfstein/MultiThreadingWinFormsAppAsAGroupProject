@@ -13,7 +13,7 @@ namespace MultiThreadingWinFormsAppAsAGroupProject
         }
         public override void RunThread() {
             msg = "Hello from BenevolentBaboon.RunThread()";
-            Thread.Sleep(10000);
+            Thread.Sleep(2000);
         }
     }
 }
