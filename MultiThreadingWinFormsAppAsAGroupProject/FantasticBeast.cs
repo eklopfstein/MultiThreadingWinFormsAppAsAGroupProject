@@ -10,26 +10,23 @@ namespace MultiThreadingWinFormsAppAsAGroupProject
 {
     abstract class FantasticBeast
     {
-        private TextBox txtMessages;
-        public void setTextBox(TextBox txtMessages) { this.txtMessages = txtMessages; }
-        public TextBox getTextBox() { return txtMessages; }
+        private String _msg;
+        public String msg {get { return _msg; } set { _msg = value; } }
+
         public virtual void SayHello() { Console.WriteLine("Hello from FantasticBeast.SayHello()"); }
+
         private Thread _thread;
 
         protected FantasticBeast()
         {
-            txtMessages = null;
             _thread = new Thread(new ThreadStart(this.RunThread));
-        }
-        protected FantasticBeast(TextBox txtMessages)
-        {
-            this.txtMessages = txtMessages;
-            _thread = new Thread(new ThreadStart(this.RunThread));
+            _msg = ""; 
         }
 
         // Thread methods / properties
         public void Start() => _thread.Start();
         public void Join() => _thread.Join();
+        public Boolean Join(int waitMilliseconds) => _thread.Join(waitMilliseconds);
         public bool IsAlive => _thread.IsAlive;
 
         // Override in base class

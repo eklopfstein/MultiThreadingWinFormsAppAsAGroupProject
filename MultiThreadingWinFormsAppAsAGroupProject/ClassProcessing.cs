@@ -23,31 +23,38 @@ namespace MultiThreadingWinFormsAppAsAGroupProject
             FantasticBeast myFantasticBeast;
             foreach (String s in files) {
                 try {
-                    txtMessages.AppendText(s);
                     myFantasticBeast = (FantasticBeast) (Activator.CreateInstance(null, "MultiThreadingWinFormsAppAsAGroupProject." + s).Unwrap());
-                    myFantasticBeast.setTextBox(txtMessages);
                     myBeasts.Add(myFantasticBeast);
                     myFantasticBeast.SayHello();
-                    Spawn(myFantasticBeast);
-                    txtMessages.AppendText(" passed");
-                    txtMessages.AppendText(Environment.NewLine);
+                    Spawn(myFantasticBeast, txtMessages);
+                    txtMessages.AppendText(Environment.NewLine + s + " spawned");
                 }
                 catch (Exception ex) {
-                    if (txtMessages != null) {
-                        txtMessages.AppendText(" failed");
-                        txtMessages.AppendText(Environment.NewLine);
-                    }
+                   txtMessages.AppendText(Environment.NewLine + s + " did not spawn");
                 }
             }
             // All the beasts have been spawned. If any are running, wait for them to finish
             foreach (FantasticBeast fb in myBeasts) {
                 if (fb.IsAlive) {
+                    Boolean joinStatus;
                     Console.WriteLine("Waiting for thread to complete");
-                    fb.Join();
+                    joinStatus = fb.Join(500);
+                    if (joinStatus == false) {
+                        txtMessages.AppendText(Environment.NewLine + fb.GetType() + " thread timed out.");
+                    } else {
+                        GetMsg(fb, txtMessages);
+                    }
+                } else {
+                    GetMsg(fb, txtMessages);
                 }
             }
         }
-        private static void Spawn(FantasticBeast fb) {
+        private static void GetMsg(FantasticBeast fb, TextBox txtMessages) {
+            // The thread should have written a message so we can retrieve it.
+            txtMessages.AppendText(Environment.NewLine + fb.msg);
+        }
+        private static void Spawn(FantasticBeast fb, TextBox txtMessages) {
+            txtMessages.AppendText(Environment.NewLine + "Spawning " + fb.GetType());
             fb.Start(); // This will invoke RunThread in the derived class
         }
 

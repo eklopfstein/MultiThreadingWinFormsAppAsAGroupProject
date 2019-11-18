@@ -54,7 +54,7 @@
     <Compile Include="FantasticBeastsNotUsed\CasualCheetah.cs" />
     <Compile Include="FantasticBeastsNotUsed\ClimbingCat.cs" />
     <Compile Include="FantasticBeastsNotUsed\DoggedDog.cs" />
-    <Compile Include="FantasticBeastsNotUsed\FantasticBeast.cs" />
+    <Compile Include="FantasticBeast.cs" />
     <Compile Include="FantasticBeastsNotUsed\FranticFox.cs" />
     <Compile Include="FantasticBeastsNotUsed\FeloniousFeline.cs" />
     <Compile Include="FantasticBeastsNotUsed\LoquaciousLemur.cs" />
