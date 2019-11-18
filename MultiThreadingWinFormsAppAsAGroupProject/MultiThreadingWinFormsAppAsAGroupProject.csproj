@@ -46,14 +46,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClassProcessing.cs" />
+    <Compile Include="FantasticBeasts\AdorableAnt.cs" />
+    <Compile Include="FantasticBeasts\BenevolentBaboon.cs" />
+    <Compile Include="FantasticBeastsNotUsed\CapriciousCow.cs" />
+    <Compile Include="FantasticBeastsNotUsed\CaptivatingCamel.cs" />
+    <Compile Include="FantasticBeastsNotUsed\CasualCheetah.cs" />
+    <Compile Include="FantasticBeastsNotUsed\ClimbingCat.cs" />
+    <Compile Include="FantasticBeastsNotUsed\DoggedDog.cs" />
+    <Compile Include="FantasticBeastsNotUsed\FantasticBeast.cs" />
+    <Compile Include="FantasticBeastsNotUsed\FranticFox.cs" />
+    <Compile Include="FantasticBeastsNotUsed\FeloniousFeline.cs" />
+    <Compile Include="FantasticBeastsNotUsed\LoquaciousLemur.cs" />
+    <Compile Include="FantasticBeastsNotUsed\MuscularMoose.cs" />
+    <Compile Include="FantasticBeastsNotUsed\PassionatePanda.cs" />
+    <Compile Include="FantasticBeastsNotUsed\PeacefulPenguin.cs" />
+    <Compile Include="FantasticBeastsNotUsed\PropitiousParakeet.cs" />
+    <Compile Include="FantasticBeastsNotUsed\RapaciousRobin.cs" />
+    <Compile Include="FantasticBeastsNotUsed\ReasonableRaccoon.cs" />
+    <Compile Include="FantasticBeastsNotUsed\SpuriousSwallow.cs" />
+    <Compile Include="FantasticBeastsNotUsed\SuperSheep.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FantasticBeastsNotUsed\GallopingGoat.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
