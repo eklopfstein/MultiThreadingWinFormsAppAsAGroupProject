@@ -1,11 +1,11 @@
-﻿using System;
+﻿/*
+ * Bill Nicholson
+ * nicholdw@ucmail.uc.edu
+ */
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.IO;
 using System.Windows.Forms;
-using System.Threading;
 
 namespace MultiThreadingWinFormsAppAsAGroupProject
 {
@@ -57,6 +57,5 @@ namespace MultiThreadingWinFormsAppAsAGroupProject
             txtMessages.AppendText(Environment.NewLine + "Spawning " + fb.GetType());
             fb.Start(); // This will invoke RunThread in the derived class
         }
-
     }
 }
