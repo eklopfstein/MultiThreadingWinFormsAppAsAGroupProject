@@ -1,19 +1,20 @@
-﻿using System;
+﻿/*
+ * Bill Nicholson
+ * nicholdw@ucmail.uc.edu
+ */
+using System;
 using System.Threading;
 using System.Threading.Tasks;
 
 namespace MultiThreadingWinFormsAppAsAGroupProject
 {
+    /// <summary>
+    /// A Fantastic Beast that will help us maintain a secure world
+    /// </summary>
     class AdorableAnt : FantasticBeast
     {
         public override void SayHello() {
             Console.WriteLine("Hello from AdorableAnt");
-        }
-        public override void RunThread() {
-            msg = "Hello from AdorableAnt.RunThread()";
-            Thread.Sleep(2000);
-            long num = Convert.ToInt64(request);
-            response = Convert.ToString(num % 5);
         }
     }
 }

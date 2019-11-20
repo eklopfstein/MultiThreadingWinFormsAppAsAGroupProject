@@ -4,15 +4,12 @@
  */
 using System;
 
-namespace MultiThreadingWinFormsAppAsAGroupProject
-{
+namespace MultiThreadingWinFormsAppAsAGroupProject {
     /// <summary>
     /// A Fantastic Beast that will help us maintain a secure world
     /// </summary>
-    class CapriciousCow : FantasticBeast
-    {
-        public override void SayHello()
-        {
+    class PerspicaciousPorcupine : FantasticBeast {
+        public override void SayHello() {
             throw new NotImplementedException();
         }
     }

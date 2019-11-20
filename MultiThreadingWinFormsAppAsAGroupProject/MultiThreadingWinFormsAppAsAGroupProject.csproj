@@ -47,8 +47,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClassProcessing.cs" />
-    <Compile Include="FantasticBeasts\AdorableAnt.cs" />
-    <Compile Include="FantasticBeasts\BenevolentBaboon.cs" />
+    <Compile Include="FantasticBeastsNotUsed\ObedientOwl.cs" />
+    <Compile Include="FantasticBeastsNotUsed\PerspicaciousPorcupine.cs" />
+    <Compile Include="FantasticBeasts\AbiogeneticTestCase.cs" />
+    <Compile Include="FantasticBeastsNotUsed\AdorableAnt.cs" />
+    <Compile Include="FantasticBeastsNotUsed\BenevolentBaboon.cs" />
     <Compile Include="FantasticBeastsNotUsed\CapriciousCow.cs" />
     <Compile Include="FantasticBeastsNotUsed\CaptivatingCamel.cs" />
     <Compile Include="FantasticBeastsNotUsed\CasualCheetah.cs" />

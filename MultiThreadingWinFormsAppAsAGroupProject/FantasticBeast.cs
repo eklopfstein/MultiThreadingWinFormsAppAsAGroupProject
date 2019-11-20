@@ -23,6 +23,7 @@ namespace MultiThreadingWinFormsAppAsAGroupProject
             _thread = new Thread(new ThreadStart(this.RunThread));
             msg = "";
             request = "";
+            response = "";
         }
 
         // Thread methods / properties
@@ -31,7 +32,7 @@ namespace MultiThreadingWinFormsAppAsAGroupProject
         public Boolean Join(int waitMilliseconds) => _thread.Join(waitMilliseconds);
         public bool IsAlive => _thread.IsAlive;
 
-        // Override in base class
-        public virtual void RunThread() { }
+        // Override in the derived class class
+        public virtual void RunThread() {}
     }
 }

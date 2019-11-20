@@ -20,12 +20,16 @@ namespace MultiThreadingWinFormsAppAsAGroupProject
         private void btnGo_Click(object sender, EventArgs e)
         {
             txtMessages.Text = "";
-            ClassProcessing.ProcessClasses(txtMessages);
+            try {
+                ClassProcessing.ProcessClasses(txtMessages);
+            } catch(Exception ex) {
+                txtMessages.AppendText("Something went very wrong: " + Environment.NewLine + ex.Message);
+            }
         }
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-
+          
         }
     }
 }

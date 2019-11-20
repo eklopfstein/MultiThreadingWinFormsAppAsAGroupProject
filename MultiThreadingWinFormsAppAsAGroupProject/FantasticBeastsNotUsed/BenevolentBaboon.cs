@@ -1,4 +1,8 @@
-﻿using System;
+﻿/*
+ * Bill Nicholson
+ * nicholdw@ucmail.uc.edu
+ */
+using System;
 using System.Collections.Generic;
 
 using System.Threading;
@@ -6,16 +10,13 @@ using System.Threading;
 
 namespace MultiThreadingWinFormsAppAsAGroupProject
 {
+    /// <summary>
+    /// A Fantastic Beast that will help us maintain a secure world
+    /// </summary>
     class BenevolentBaboon : FantasticBeast
     {
         public override void SayHello() {
             Console.WriteLine("Hello from BenevolentBaboon");
-        }
-        public override void RunThread() {
-            msg = "Hello from BenevolentBaboon.RunThread()";
-            long num = Convert.ToInt64(request);
-            response = Convert.ToString(num / 2);
-            Thread.Sleep(2000);
         }
     }
 }

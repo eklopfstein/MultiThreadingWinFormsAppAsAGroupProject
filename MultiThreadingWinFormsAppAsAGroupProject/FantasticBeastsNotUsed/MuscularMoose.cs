@@ -1,11 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿/*
+ * Bill Nicholson
+ * nicholdw@ucmail.uc.edu
+ */
+using System;
 
 namespace MultiThreadingWinFormsAppAsAGroupProject
 {
+    /// <summary>
+    /// A Fantastic Beast that will help us maintain a secure world
+    /// </summary>
     class MuscularMoose : FantasticBeast
     {
         public override void SayHello()
