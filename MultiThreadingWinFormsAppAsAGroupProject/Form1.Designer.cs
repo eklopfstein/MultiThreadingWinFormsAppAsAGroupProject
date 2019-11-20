@@ -37,7 +37,7 @@
             this.btnGo.Cursor = System.Windows.Forms.Cursors.Help;
             this.btnGo.Location = new System.Drawing.Point(713, 413);
             this.btnGo.Name = "btnGo";
-            this.btnGo.Size = new System.Drawing.Size(75, 23);
+            this.btnGo.Size = new System.Drawing.Size(86, 23);
             this.btnGo.TabIndex = 0;
             this.btnGo.Text = "Go";
             this.btnGo.UseVisualStyleBackColor = true;
