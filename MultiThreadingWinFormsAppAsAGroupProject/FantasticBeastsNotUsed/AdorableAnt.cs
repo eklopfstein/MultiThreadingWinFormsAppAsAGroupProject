@@ -16,5 +16,8 @@ namespace MultiThreadingWinFormsAppAsAGroupProject
         public override void SayHello() {
             Console.WriteLine("Hello from AdorableAnt");
         }
+        public override void RunThread() {
+            response = "42";
+        }
     }
 }
