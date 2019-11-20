@@ -24,6 +24,7 @@ namespace MultiThreadingWinFormsAppAsAGroupProject
             foreach (String s in files) {
                 try {
                     myFantasticBeast = (FantasticBeast) (Activator.CreateInstance(null, "MultiThreadingWinFormsAppAsAGroupProject." + s).Unwrap());
+                    myFantasticBeast.request = "12345";
                     myBeasts.Add(myFantasticBeast);
                     myFantasticBeast.SayHello();
                     Spawn(myFantasticBeast, txtMessages);
@@ -43,6 +44,7 @@ namespace MultiThreadingWinFormsAppAsAGroupProject
                         txtMessages.AppendText(Environment.NewLine + fb.GetType() + " thread timed out.");
                     } else {
                         GetMsg(fb, txtMessages);
+                        GetResponse(fb, txtMessages);
                     }
                 } else {
                     GetMsg(fb, txtMessages);
@@ -50,6 +52,11 @@ namespace MultiThreadingWinFormsAppAsAGroupProject
             }
             txtMessages.AppendText(Environment.NewLine + "****Done.****");
         }
+        private static void GetResponse(FantasticBeast fb, TextBox txtMessages) {
+            // The thread should have responded to our request so we can retrieve it.
+            txtMessages.AppendText(Environment.NewLine + "Response from " + fb.GetType() + ": " + fb.response);
+        }
+    
         private static void GetMsg(FantasticBeast fb, TextBox txtMessages) {
             // The thread should have written a message so we can retrieve it.
             txtMessages.AppendText(Environment.NewLine + fb.msg);

@@ -11,15 +11,18 @@ namespace MultiThreadingWinFormsAppAsAGroupProject
     {
         private String _msg;
         public String msg {get { return _msg; } set { _msg = value; } }
+        private String _request, _response;
+        public String request  { get { return _request; } set { _request = value; } }
+        public String response { get { return _response; } set { _response = value; } }
 
         public virtual void SayHello() { Console.WriteLine("Hello from FantasticBeast.SayHello()"); }
 
         private Thread _thread;
 
-        protected FantasticBeast()
-        {
+        protected FantasticBeast() {
             _thread = new Thread(new ThreadStart(this.RunThread));
-            _msg = ""; 
+            msg = "";
+            request = "";
         }
 
         // Thread methods / properties

@@ -13,6 +13,8 @@ namespace MultiThreadingWinFormsAppAsAGroupProject
         }
         public override void RunThread() {
             msg = "Hello from BenevolentBaboon.RunThread()";
+            long num = Convert.ToInt64(request);
+            response = Convert.ToString(num / 2);
             Thread.Sleep(2000);
         }
     }
