@@ -35,7 +35,7 @@
             // btnGo
             // 
             this.btnGo.Cursor = System.Windows.Forms.Cursors.Help;
-            this.btnGo.Location = new System.Drawing.Point(713, 413);
+            this.btnGo.Location = new System.Drawing.Point(1001, 444);
             this.btnGo.Name = "btnGo";
             this.btnGo.Size = new System.Drawing.Size(86, 23);
             this.btnGo.TabIndex = 0;
@@ -45,17 +45,18 @@
             // 
             // txtMessages
             // 
+            this.txtMessages.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMessages.Location = new System.Drawing.Point(12, 12);
             this.txtMessages.Multiline = true;
             this.txtMessages.Name = "txtMessages";
-            this.txtMessages.Size = new System.Drawing.Size(695, 426);
+            this.txtMessages.Size = new System.Drawing.Size(1075, 426);
             this.txtMessages.TabIndex = 1;
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1099, 475);
             this.Controls.Add(this.txtMessages);
             this.Controls.Add(this.btnGo);
             this.Name = "frmMain";

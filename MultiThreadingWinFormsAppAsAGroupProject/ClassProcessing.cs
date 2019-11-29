@@ -17,6 +17,9 @@ namespace MultiThreadingWinFormsAppAsAGroupProject
     class ClassProcessing
     {
         private static int timeoutSeconds = 5000;
+        private static String testCase_Request = "356291053";
+        private static String testCase_Response = "19541";
+
         /// <summary>
         /// Exercise all the Fantastic Beast derived classes and see if they do what they should be doing
         /// </summary>
@@ -36,7 +39,7 @@ namespace MultiThreadingWinFormsAppAsAGroupProject
             foreach (String s in files) {
                 try {
                     myFantasticBeast = (FantasticBeast) (Activator.CreateInstance(null, "MultiThreadingWinFormsAppAsAGroupProject." + s).Unwrap());
-                    myFantasticBeast.request = "356291053";
+                    myFantasticBeast.request = testCase_Request;
                     myBeasts.Add(myFantasticBeast);
                     myFantasticBeast.SayHello();
                     Spawn(myFantasticBeast, txtMessages);
@@ -78,7 +81,7 @@ namespace MultiThreadingWinFormsAppAsAGroupProject
             Boolean result = true;      // Hope for the best
             // The thread should have responded to our request so we can retrieve it.
             txtMessages.AppendText(Environment.NewLine + "Response from " + fb.GetType() + ": " + fb.response);
-            if (fb.response.Trim() == "19541") {
+            if (fb.response.Trim() == testCase_Response) {
                 txtMessages.AppendText(": solution is correct");
             }
             else {
