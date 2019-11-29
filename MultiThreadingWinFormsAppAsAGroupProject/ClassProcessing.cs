@@ -24,8 +24,7 @@ namespace MultiThreadingWinFormsAppAsAGroupProject
         /// Exercise all the Fantastic Beast derived classes and see if they do what they should be doing
         /// </summary>
         /// <param name="txtMessages">A text box to write commentary in. Can't be null.</param>
-        public static void ProcessClasses(TextBox txtMessages)
-        {
+        public static void ProcessClasses(TextBox txtMessages) {
             List<FantasticBeast> myBeasts = new List<FantasticBeast>();
             List<String> files = new List<string>();
             // Read the directory that contains all the FantasticBeast derived objects we will process
