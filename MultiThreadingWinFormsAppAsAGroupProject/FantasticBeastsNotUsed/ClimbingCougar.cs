@@ -9,7 +9,7 @@ namespace MultiThreadingWinFormsAppAsAGroupProject
     /// <summary>
     /// A Fantastic Beast that will help us maintain a secure world
     /// </summary>
-    class ClimbingCat : FantasticBeast
+    class ClimbingCougar : FantasticBeast
     {
         public override void SayHello()
         {

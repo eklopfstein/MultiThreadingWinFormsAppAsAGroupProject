@@ -55,7 +55,7 @@
     <Compile Include="FantasticBeastsNotUsed\CapriciousCow.cs" />
     <Compile Include="FantasticBeastsNotUsed\CaptivatingCamel.cs" />
     <Compile Include="FantasticBeastsNotUsed\CasualCheetah.cs" />
-    <Compile Include="FantasticBeastsNotUsed\ClimbingCat.cs" />
+    <Compile Include="FantasticBeastsNotUsed\ClimbingCougar.cs" />
     <Compile Include="FantasticBeastsNotUsed\DoggedDog.cs" />
     <Compile Include="FantasticBeast.cs" />
     <Compile Include="FantasticBeastsNotUsed\FranticFox.cs" />
@@ -100,6 +100,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fb.JPG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

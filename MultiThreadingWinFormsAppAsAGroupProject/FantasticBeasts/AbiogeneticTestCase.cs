@@ -12,7 +12,7 @@ namespace MultiThreadingWinFormsAppAsAGroupProject {
     /// </summary>
     class AbiogeneticTestCase : FantasticBeast {
         public override void SayHello() {
-            Console.WriteLine("Hello from this.GetType()");
+            Console.WriteLine("Hello from " + this.GetType());
         }
         public override void RunThread() {
             msg = "Hello from AbiogeneticTestCase.RunThread()";
