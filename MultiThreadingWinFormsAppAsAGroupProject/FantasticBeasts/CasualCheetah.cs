@@ -1,4 +1,4 @@
-﻿/*
+/*
  * Bill Nicholson
  * nicholdw@ucmail.uc.edu
  */
@@ -18,9 +18,34 @@ namespace MultiThreadingWinFormsAppAsAGroupProject
         }
         public override void RunThread()
         {
-            Thread.Sleep(2000);
             long num = Convert.ToInt64(request);
-            response = Convert.ToString(19541);
+            response = Convert.ToString(LPF(num));
+        }
+
+        static private long LPF(long num)
+        {
+            long test = 1;
+            bool found = false;
+            for (long i = num / 2; !found && i > 1; i--)
+            {
+                if (num % i == 0 && isPrime(i))
+                {
+                    test = i;
+                    found = true;
+                }
+            }
+            return test;
+
+        }
+        static private bool isPrime(long num)
+        {
+            bool prime = true;
+            for (long i = 2; i <= num / 2; i++)
+            {
+                if (num % i == 0)
+                    prime = false;
+            }
+            return prime;
         }
     }
 }
