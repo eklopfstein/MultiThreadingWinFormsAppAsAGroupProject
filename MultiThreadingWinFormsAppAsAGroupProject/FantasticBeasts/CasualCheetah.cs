@@ -39,13 +39,14 @@ namespace MultiThreadingWinFormsAppAsAGroupProject
         }
         static private bool isPrime(long num)
         {
-            bool prime = true;
             for (long i = 2; i <= num / 2; i++)
             {
                 if (num % i == 0)
-                    prime = false;
+                {
+                    return false;
+                }
             }
-            return prime;
+            return true;
         }
     }
 }
